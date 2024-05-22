@@ -14,12 +14,12 @@
         <span class="lives"></span>
     </div>
     <div class="level-selection">
-        <button onclick="chooseLevelSize(this)">EASY</button>
-        <button onclick="chooseLevelSize(this)">MEDIUM</button>
-        <button onclick="chooseLevelSize(this)">EXPERT</button>
+        <button class="easy-btn" onclick="chooseLevelSize(this)">EASY</button>
+        <button class="medium-btn" onclick="chooseLevelSize(this)">MEDIUM</button>
+        <button class="expert-btn" onclick="chooseLevelSize(this)">EXPERT</button>
     </div>
     <div class="modal">
-        <span class="modal-text"></span>
+        <h1 class="modal-text"></h1>
         <button class="btn-modal" onclick="onInit()">Restart</button>
     </div>
     <div class="board">
@@ -29,7 +29,7 @@
     </tbody>
 </table>
     </div>
-    <footer>Made by Denis Libin</footer>
+    <footer>Made by <span class="name">Denis Libin</span></footer>
     <script src="js/util.js"></script>
     <script src="js/main.js"></script>
 </body>

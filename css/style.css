@@ -20,10 +20,12 @@ body {
 h1 {
     color: #1F0021;
     text-align: center;
+    text-shadow: 3px 5px 6px rgba(0,0,0,0.38);
 }
 
 footer {
     padding: 15px;
+    text-shadow: 3px 5px 6px rgba(0,0,0,0.38);
 }
 
 table {
@@ -57,7 +59,25 @@ button {
     font-size: medium;
     font-weight: bold;
     padding: 5px;
+    cursor: pointer;
+
 }
+
+.easy-btn {
+    background-color: #2228FF
+}
+
+.medium-btn {
+    background-color: #FFF93B;
+}
+
+.expert-btn {
+    background-color: #FF0807;
+}
+
+/* .name { */
+/* font-family: Snell Roundhand, cursive */
+/* } */
 
 .menu {
     padding: 15px;
@@ -74,13 +94,13 @@ button {
 
 .modal {
     display: none;
-    background-color: rgb(58, 54, 54);
-    border: 5px solid rgb(152, 150, 147);
+    background-color: #2228FF;
+    border: 5px solid #FF0807;
     width: 300px;
     padding: 20px;
     position: absolute;
     top: 300px;
-    left: calc(50% - 175px);
+    left: calc(50% - 150px);
     box-shadow: 0px 5px 15px 5px #000000;
     color: rgb(135, 133, 129);
 }
