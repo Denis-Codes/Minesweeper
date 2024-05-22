@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MINESWEEPER</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body onload="onInit()">
+    <h1>😎 MINESWEEPER 💣</h1>
+    <div class="menu">
+        <span class="timer"></span>
+        <span class="restart-face" onclick="reset()"></span>
+        <span class="lives"></span>
+    </div>
+    <div class="level-selection">
+        <button onclick="chooseLevelSize(this)">EASY</button>
+        <button onclick="chooseLevelSize(this)">MEDIUM</button>
+        <button onclick="chooseLevelSize(this)">EXPERT</button>
+    </div>
+    <div class="modal">
+        <span class="modal-text"></span>
+        <button class="btn-modal" onclick="onInit()">Restart</button>
+    </div>
+    <div class="board">
+<table>
+    <tbody>
+
+    </tbody>
+</table>
+    </div>
+    <footer>Made by Denis Libin</footer>
+    <script src="js/util.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

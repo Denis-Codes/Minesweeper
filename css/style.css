@@ -1,0 +1,122 @@
+/*red #FF0807
+/* deep purple #1F0021
+/* yellow #FFF93B
+/* off white #F0F7F5
+/* blue #2228FF */
+
+
+* {
+    box-sizing: border-box;
+    text-align: center;
+}
+
+body {
+    font-weight: bolder;
+    font-size: large;
+    font-family: "Lucida Console", "Courier New", monospace;
+    background: #F0F7F5
+}
+
+h1 {
+    color: #1F0021;
+    text-align: center;
+}
+
+footer {
+    padding: 15px;
+}
+
+table {
+    margin-top: 1%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+td {
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    transition: 0.2s;
+    border-top: 3px solid white;
+    border-left: 3px solid white;
+    border-bottom: 3px solid rgb(80, 80, 80);
+    border-right: 3px solid rgb(80, 80, 80);
+    min-width: 35px;
+
+
+    background-color: rgb(177, 177, 177);
+    border-radius: 5%;
+    box-shadow: 3px 7px 25px black;
+    font-weight: bolder;
+    /* font-size: xx-large; */
+    cursor: pointer;
+}
+
+button {
+    font-size: medium;
+    font-weight: bold;
+    padding: 5px;
+}
+
+.menu {
+    padding: 15px;
+}
+
+.revealed {
+    background-color: rgb(145, 145, 145);
+    border: 3px solid rgb(102, 102, 102);
+}
+
+.exploded {
+    background-color: red
+}
+
+.modal {
+    display: none;
+    background-color: rgb(58, 54, 54);
+    border: 5px solid rgb(152, 150, 147);
+    width: 300px;
+    padding: 20px;
+    position: absolute;
+    top: 300px;
+    left: calc(50% - 175px);
+    box-shadow: 0px 5px 15px 5px #000000;
+    color: rgb(135, 133, 129);
+}
+
+.restart-face {
+    cursor: pointer;
+}
+
+.one {
+    color: blue
+}
+
+.two {
+    color: green
+}
+
+.three {
+    color: red
+}
+
+.four {
+    color: darkblue
+}
+
+.five {
+    color: brown
+}
+
+.six {
+    color: lightseagreen
+}
+
+.seven {
+    color: black
+}
+
+.eight {
+    color: lightgray
+}
