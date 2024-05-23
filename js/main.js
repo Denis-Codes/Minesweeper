@@ -18,7 +18,7 @@ function onInit() {
     gGame = {
         isOn: false,
         livesCount: 1,
-        hintsCount: 3,
+        safeClicksCount: 3,
         shownCount: 0,
         markedCount: 0,
         secsPassed: 0
@@ -46,8 +46,8 @@ function onInit() {
     lives.innerText = '❤️' + gGame.livesCount
     var face = document.querySelector('.restart-face')
     face.innerText = '🙂'
-    var elHints = document.querySelector('.hints')
-    elHints.innerText = '💡' + gGame.hintsCount
+    var elSafeClicks = document.querySelector('.safe-clicks')
+    elSafeClicks.innerText = '👆' + gGame.safeClicksCount
 }
 
 function createBoard(size) {
@@ -263,7 +263,7 @@ function darkMode(elBtn) {
     }
 }
 
-function hints() {
+function safeClicks() {
     var emptyCells = [];
 
     for (var i = 0; i < gBoard.length; i++) {
@@ -282,8 +282,8 @@ function hints() {
     var elRandEmptyCell = document.querySelector(`.cell-${randomEmptyCell.row}-${randomEmptyCell.col}`)
     elRandEmptyCell.classList.add('highlighted')
 
-    gGame.hintsCount--
-    if (gGame.hintsCount < 0) return
-    var elHints = document.querySelector('.hints')
-    elHints.innerText = '💡' + gGame.hintsCount
+    gGame.safeClicksCount--
+    if (gGame.safeClicksCount < 0) return
+    var elSafeClicks = document.querySelector('.safe-clicks')
+    elSafeClicks.innerText = '👆' + gGame.safeClicksCount
 }

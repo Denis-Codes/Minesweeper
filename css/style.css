@@ -62,6 +62,7 @@ button {
     padding: 3px;
     cursor: pointer;
     box-shadow: 3px 7px 25px black;
+    color: #1F0021;
 }
 
 .menu {
@@ -101,9 +102,9 @@ footer {
     font-size: xx-small;
 }
 
-/*HINTS */
+/*SAFE CLICKS */
 
-.hints {
+.safe-clicks {
     cursor: pointer;
 }
 

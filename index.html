@@ -7,19 +7,19 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body onload="onInit()">
-    <h1>😎 MINESWEEPER 💣</h1>
-    <button class="mode-switch" onclick="darkMode(this)">DARK MODE</button>
+    <h1 title="Enjoy :]">😎 MINESWEEPER 💣</h1>
+    <button class="mode-switch" title="Mode Switch" onclick="darkMode(this)">DARK MODE</button>
     <div class="menu">
-        <span class="timer"></span>
-        <span class="lives"></span>
-        <span class="hints" onclick="hints()"></span>
+        <span class="timer" title="Timer"></span>
+        <span class="lives" title="Lives"></span>
+        <span class="safe-clicks" title="Safe Clicks" onclick="safeClicks()"></span>
     </div>
     <div class="level-selection">
-        <button class="easy-btn" onclick="chooseLevelSize(this)">EASY</button>
-        <button class="medium-btn" onclick="chooseLevelSize(this)">MEDIUM</button>
-        <button class="expert-btn" onclick="chooseLevelSize(this)">EXPERT</button>
+        <button class="easy-btn" title="Difficulty" onclick="chooseLevelSize(this)">EASY</button>
+        <button class="medium-btn" title="Difficulty" onclick="chooseLevelSize(this)">MEDIUM</button>
+        <button class="expert-btn" title="Difficulty" onclick="chooseLevelSize(this)">EXPERT</button>
     </div>
-    <button class="restart-face" onclick="reset()"></button>
+    <button class="restart-face" title="Restart" onclick="reset()"></button>
     <div class="modal">
         <h1 class="modal-text"></h1>
         <button class="btn-modal" onclick="reset()">Restart</button>

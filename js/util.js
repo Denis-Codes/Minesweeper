@@ -66,7 +66,7 @@ function reset() {
     gGame = {
         isOn: false,
         livesCount: 3,
-        hintsCount: 3,
+        safeClicksCount: 3,
         shownCount: 0,
         markedCount: 0,
         secsPassed: 0
@@ -75,8 +75,8 @@ function reset() {
     var elModal = document.querySelector('.modal')
     elModal.style.display = 'none'
 
-    var elSpan = document.querySelector('.timer')
-    elSpan.innerText = '⏳' + '0'
+    var elTimer = document.querySelector('.timer')
+    elTimer.innerText = '⏳' + '0'
     gIsFirstClick = true
 
     gBoard = createBoard(gLevel.SIZE)
@@ -88,8 +88,8 @@ function reset() {
     lives.innerText = '❤️' + gGame.livesCount
     var face = document.querySelector('.restart-face')
     face.innerText = '🙂'
-    var elHints = document.querySelector('.hints')
-    elHints.innerText = '💡' + gGame.hintsCount
+    var elSafeClicks = document.querySelector('.safe-clicks')
+    elSafeClicks.innerText = '👆' + gGame.safeClicksCount
 }
 
 function chooseLevelSize(elBtn) {
