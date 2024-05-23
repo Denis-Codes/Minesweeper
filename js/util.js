@@ -74,7 +74,7 @@ function reset() {
     elModal.style.display = 'none'
 
     var elSpan = document.querySelector('.timer')
-    elSpan.innerText = '⏳' + '0.00'
+    elSpan.innerText = '⏳' + '0'
     gIsFirstClick = true
 
     gBoard = createBoard(gLevel.SIZE)
