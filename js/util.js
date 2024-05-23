@@ -62,9 +62,11 @@ function getRandomColor() {
 
 function reset() {
     clearInterval(gTimerInterval)
+    
     gGame = {
         isOn: false,
         livesCount: 3,
+        hintsCount: 3,
         shownCount: 0,
         markedCount: 0,
         secsPassed: 0
@@ -86,21 +88,26 @@ function reset() {
     lives.innerText = '❤️' + gGame.livesCount
     var face = document.querySelector('.restart-face')
     face.innerText = '🙂'
+    var elHints = document.querySelector('.hints')
+    elHints.innerText = '💡' + gGame.hintsCount
 }
 
 function chooseLevelSize(elBtn) {
     switch (elBtn.innerText) {
         case "EASY":
             gLevel.SIZE = 4
-            gLevel.MINES = 2    
+            gLevel.MINES = 2   
+            gGame.livesCount = 1 
             break
         case "MEDIUM":
             gLevel.SIZE = 8
             gLevel.MINES = 14
+            gGame.livesCount = 3
             break
         case "EXPERT":
             gLevel.SIZE = 12
             gLevel.MINES = 32
+            gGame.livesCount = 3
             break
         default:
             console.log("Unexpected level size:", elBtn.innerText);
@@ -108,3 +115,4 @@ function chooseLevelSize(elBtn) {
     }
    reset()
 }
+

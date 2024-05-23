@@ -13,6 +13,7 @@
 body {
     font-weight: bolder;
     font-size: large;
+    transition: 0.3s;
     font-family: "Lucida Console", "Courier New", monospace;
     background: #F0F7F5
 }
@@ -20,16 +21,10 @@ body {
 h1 {
     color: #1F0021;
     text-align: center;
-    text-shadow: 3px 5px 6px rgba(0,0,0,0.38);
-}
-
-footer {
-    padding: 15px;
-    text-shadow: 3px 5px 6px rgba(0,0,0,0.38);
+    text-shadow: 3px 5px 6px rgba(0, 0, 0, 0.38);
 }
 
 table {
-    margin-top: 1%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -45,42 +40,11 @@ td {
     border-bottom: 3px solid rgb(80, 80, 80);
     border-right: 3px solid rgb(80, 80, 80);
     min-width: 35px;
-
-
     background-color: rgb(177, 177, 177);
     border-radius: 5%;
     box-shadow: 3px 7px 25px black;
     font-weight: bolder;
-    /* font-size: xx-large; */
     cursor: pointer;
-}
-
-button {
-    font-size: medium;
-    font-weight: bold;
-    padding: 5px;
-    cursor: pointer;
-
-}
-
-.easy-btn {
-    background-color: #2228FF
-}
-
-.medium-btn {
-    background-color: #FFF93B;
-}
-
-.expert-btn {
-    background-color: #FF0807;
-}
-
-/* .name { */
-/* font-family: Snell Roundhand, cursive */
-/* } */
-
-.menu {
-    padding: 15px;
 }
 
 .revealed {
@@ -90,6 +54,18 @@ button {
 
 .exploded {
     background-color: red
+}
+
+button {
+    font-size: medium;
+    font-weight: bold;
+    padding: 3px;
+    cursor: pointer;
+    box-shadow: 3px 7px 25px black;
+}
+
+.menu {
+    padding: 10px;
 }
 
 .modal {
@@ -107,7 +83,49 @@ button {
 
 .restart-face {
     cursor: pointer;
+    margin: 5px;
+    border: none
 }
+
+.dark-mode {
+    font-weight: bolder;
+    font-size: large;
+    transition: 0.3s;
+    font-family: "Lucida Console", "Courier New", monospace;
+    background: #393939
+}
+
+footer {
+    padding: 15px;
+    text-shadow: 3px 5px 6px rgba(0, 0, 0, 0.38);
+    font-size: xx-small;
+}
+
+/*HINTS */
+
+.hints {
+    cursor: pointer;
+}
+
+.highlighted {
+    background-color: lightgreen;
+}
+
+/*DIFFICULTY LEVELS */
+
+.easy-btn {
+    background-color: #2228FF
+}
+
+.medium-btn {
+    background-color: #FFF93B;
+}
+
+.expert-btn {
+    background-color: #FF0807;
+}
+
+/*NUMBER COLORS */
 
 .one {
     color: blue
