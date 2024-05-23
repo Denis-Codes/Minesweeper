@@ -11,7 +11,6 @@ var gIsFirstClick
 var gTimerInterval
 var gStartTime
 
-
 function onInit() {
     gIsFirstClick = true
     clearInterval(gTimerInterval)
@@ -108,6 +107,7 @@ function setMinesOnBoard(board) {
 }
 
 function onCellClicked(elCell, cellI, cellJ) {
+    gIsFirstClick = true
     var cell = gBoard[cellI][cellJ]
     if (cell.isShown) return
     if (gGame.shownCount === 0) {
@@ -117,6 +117,10 @@ function onCellClicked(elCell, cellI, cellJ) {
     }
 
     if (!gGame.isOn) return
+    // if (gIsFirstClick) {
+        // setMinesOnBoard(gBoard)
+    // }
+    // gIsFirstClick = false
 
     elCell.classList.add('revealed')
     if (!cell.isShown) {
@@ -248,7 +252,7 @@ function onCellMarked(elCell, i, j) {
 
 function darkMode(elBtn) {
 
-    var body = document.body;
+    var body = document.querySelector('body')
 
     body.classList.toggle("dark-mode")
 
