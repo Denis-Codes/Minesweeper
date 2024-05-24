@@ -93,7 +93,8 @@ button {
     font-size: large;
     transition: 0.3s;
     font-family: "Lucida Console", "Courier New", monospace;
-    background: #393939
+    background: #393939;
+    color:#FFF93B
 }
 
 footer {

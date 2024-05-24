@@ -1,7 +1,9 @@
+'use strict'
+
 function getRandomInt(min, max) {
-	const minCeiled = Math.ceil(min)
-	const maxFloored = Math.floor(max)
-	return Math.floor(Math.random() * (maxFloored - minCeiled) + minCeiled)
+    const minCeiled = Math.ceil(min)
+    const maxFloored = Math.floor(max)
+    return Math.floor(Math.random() * (maxFloored - minCeiled) + minCeiled)
 }
 
 function getClassName(location) {
@@ -60,59 +62,19 @@ function getRandomColor() {
     return color
 }
 
-function reset() {
-    clearInterval(gTimerInterval)
-    
-    gGame = {
-        isOn: false,
-        livesCount: 3,
-        safeClicksCount: 3,
-        shownCount: 0,
-        markedCount: 0,
-        secsPassed: 0
-    }    
-
-    var elModal = document.querySelector('.modal')
-    elModal.style.display = 'none'
-
-    var elTimer = document.querySelector('.timer')
-    elTimer.innerText = '⏳' + '0'
-    gIsFirstClick = true
-
-    gBoard = createBoard(gLevel.SIZE)
-    // IsFirstClick()
-
-    setMinesOnBoard(gBoard)
-    renderBoard(gBoard)
-    var lives = document.querySelector('.lives')
-    lives.innerText = '❤️' + gGame.livesCount
-    var face = document.querySelector('.restart-face')
-    face.innerText = '🙂'
-    var elSafeClicks = document.querySelector('.safe-clicks')
-    elSafeClicks.innerText = '👆' + gGame.safeClicksCount
-}
-
 function chooseLevelSize(elBtn) {
-    switch (elBtn.innerText) {
-        case "EASY":
-            gLevel.SIZE = 4
-            gLevel.MINES = 2   
-            gGame.livesCount = 1 
-            break
-        case "MEDIUM":
-            gLevel.SIZE = 8
-            gLevel.MINES = 14
-            gGame.livesCount = 3
-            break
-        case "EXPERT":
-            gLevel.SIZE = 12
-            gLevel.MINES = 32
-            gGame.livesCount = 3
-            break
-        default:
-            console.log("Unexpected level size:", elBtn.innerText);
-            break
-    }
-   reset()
+    var size = +elBtn.dataset.size
+    var mines = +elBtn.dataset.mines
+    gLevel.SIZE = size
+    gLevel.MINES = mines
+    onInit()
 }
 
+function startTimer() {
+    gStartTime = Date.now()
+    gTimerInterval = setInterval(() => {
+        var seconds = ((Date.now() - gStartTime) / 1000).toFixed(0);
+        var elTimer = document.querySelector('.timer');
+        elTimer.innerText = '⏳' + seconds
+    }, 1000);
+}

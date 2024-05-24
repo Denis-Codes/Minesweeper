@@ -15,14 +15,14 @@
         <span class="safe-clicks" title="Safe Clicks" onclick="safeClicks()"></span>
     </div>
     <div class="level-selection">
-        <button class="easy-btn" title="Difficulty" onclick="chooseLevelSize(this)">EASY</button>
-        <button class="medium-btn" title="Difficulty" onclick="chooseLevelSize(this)">MEDIUM</button>
-        <button class="expert-btn" title="Difficulty" onclick="chooseLevelSize(this)">EXPERT</button>
+        <button data-size="4" data-mines="2" class="easy-btn" title="Difficulty" onclick="chooseLevelSize(this)">EASY</button>
+        <button data-size="8" data-mines="14" class="medium-btn" title="Difficulty" onclick="chooseLevelSize(this)">MEDIUM</button>
+        <button data-size="12" data-mines="32" class="expert-btn" title="Difficulty" onclick="chooseLevelSize(this)">EXPERT</button>
     </div>
-    <button class="restart-face" title="Restart" onclick="reset()"></button>
+    <button class="restart-face" title="Restart" onclick="onInit()"></button>
     <div class="modal">
         <h1 class="modal-text"></h1>
-        <button class="btn-modal" onclick="reset()">Restart</button>
+        <button class="btn-modal" onclick="onInit()">Restart</button>
     </div>
     <div class="board">
 <table>
