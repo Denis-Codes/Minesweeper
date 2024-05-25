@@ -54,6 +54,7 @@ td {
 
 .exploded {
     background-color: red
+    /* outline: solid 2px red */
 }
 
 button {
@@ -94,7 +95,7 @@ button {
     transition: 0.3s;
     font-family: "Lucida Console", "Courier New", monospace;
     background: #393939;
-    color:#FFF93B
+    color: #FFF93B
 }
 
 footer {
@@ -110,8 +111,20 @@ footer {
 }
 
 .highlighted {
-    background-color: lightgreen;
+    /* background-color: lightgreen; */
+    outline:solid 3px #FFF93B
 }
+
+/* HINTS */
+
+.hints {
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+/* .hints-count {
+    opacity: 1;
+} */
 
 /*DIFFICULTY LEVELS */
 
