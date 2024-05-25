@@ -170,8 +170,8 @@ function isVictory() {
             var cell = gBoard[i][j]
             if (cell.isMine && cell.isMarked) {
                 correctFlags++
-            } 
-             if (!cell.isMine && !cell.isShown) {
+            }
+            if (!cell.isMine && !cell.isShown) {
                 openedCells++
             }
         }
@@ -290,6 +290,9 @@ function safeClicks() {
     gGame.safeClicksCount--
     if (gGame.safeClicksCount < 0) return
     elRandEmptyCell.classList.add('highlighted')
+    setTimeout(() => {
+        elRandEmptyCell.classList.remove('highlighted')
+    }, 2000)
     var elSafeClicks = document.querySelector('.safe-clicks')
     elSafeClicks.innerText = '👆' + gGame.safeClicksCount
 }
